@@ -1,0 +1,17 @@
+{
+    "paths": {
+        "data_dir": "data",
+        "output_dir": "output"
+    },
+    "index": {
+        "user": "user_name",
+        "password": "password",
+        "index_name": "misinfo_facts",
+        "port": 9200,
+        "hosts": [
+            "ps-740-08.ornl.gov",
+            "ps-740-09.ornl.gov",
+            "ps-740-10.ornl.gov"
+        ]
+    }
+}
