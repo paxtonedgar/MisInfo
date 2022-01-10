@@ -1,0 +1,35 @@
+{
+    "name": "nb_def_binary_2grams",
+    "random_seed": 0,
+    "tokenizer": {
+        "stop": true, 
+        "punct": true, 
+        "lower": true, 
+        "stem": false,
+        "replace_nums": true
+    },
+    "tfidf": false,
+    "vectorizer_class": "BowVectorizer",
+    "vectorizer": {
+        "encoding": "utf-8",
+        "decode_error": "strict",
+        "strip_accents": null,
+        "lowercase": true,
+        "preprocessor": null,
+        "stop_words": null,
+        "ngram_range": [1, 2],
+        "analyzer": "word",
+        "max_df": 1.0,
+        "min_df": 2,
+        "max_features": null,
+        "vocabulary": null,
+        "binary": true
+    },
+    "model_class": "BNB",
+    "model": {
+        "alpha": 1.0, 
+        "binarize": null,
+        "fit_prior": true, 
+        "class_prior": null
+    }
+}

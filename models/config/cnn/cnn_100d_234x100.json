@@ -1,0 +1,38 @@
+{
+    "name": "cnn_100d_234x100",
+    "model_class": "CNN",
+    "trainer_class": "CNNTrainer",
+    "cuda": false,
+    "random_seed": 0,
+    "device_idx": 0,
+    "network": {
+      "max_tokens": 10000,
+      "embedding_size": 100,
+      "pretrained_embeddings": "models/embeddings/glove.6B.100d.txt",
+      "freeze_embeddings": false,
+      "kernel_sizes": [2, 3, 4],
+      "num_kernels": 50,
+      "num_classes": 2
+    },
+    "epochs": 50,
+    "dataloader_params": {
+        "batch_size": 16,
+        "embeddings_path": "models/embeddings/glove.6B.100d.txt",
+        "vector_cache": "models/embeddings/.vector_cache/",
+        "max_tokens": null
+    },
+    "dropout": 0.5,
+    "optimizer_type": "Adam",
+    "optimizer_params": {
+      "lr": 0.001,
+      "weight_decay": 0
+    },
+    "loss_function": "cross_entropy",
+    "log_interval": 10,
+    "save_interval": null,
+    "save_directory": "models/trained/",
+    "save_best": true,
+    "monitor_metric": "val_f_score",
+    "monitor_mode": "max",
+    "resume_from": null
+  }
